@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class SimpleLinkedListTester {
-    
+
     private static StringBuilder sb;
-    
+
     public static void main(String[] args) {
         sb = new StringBuilder();
-        
+
         testConstructors();
         testAdd();
         testSizeAndClear();
@@ -16,7 +16,7 @@ public class SimpleLinkedListTester {
         testRemove();
         testSet();
     }
-    
+
     private static void testConstructors() {
         try {
             LinkedList<String> list = new LinkedList<>();
@@ -50,7 +50,7 @@ public class SimpleLinkedListTester {
 
         String expected = sb.toString();
         sb.setLength(0);
-        
+
         try {
             SimpleLinkedList simpleList = new SimpleLinkedList();
 
@@ -80,7 +80,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to create list: ");
             sb.append(e.toString());
         }
-        
+
         String actual = sb.toString();
         sb.setLength(0);
 
@@ -93,7 +93,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testConstructors.");
         }
     }
-    
+
     private static void testAdd() {
         LinkedList<String> list = new LinkedList<>();
         SimpleLinkedList simpleList = new SimpleLinkedList();
@@ -121,7 +121,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add elements: ");
             sb.append(e.toString());
         }
-        
+
         try {
             list.add(-1, "invalid");
 
@@ -141,10 +141,10 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add element: ");
             sb.append(e.toString());
         }
-        
+
         String expected = sb.toString();
         sb.setLength(0);
-        
+
         try {
             sb.append("Initial contents of list: " + simpleList);
             sb.append("\nInitial size of list: " + simpleList.size());
@@ -168,7 +168,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add elements: ");
             sb.append(e.toString());
         }
-        
+
         try {
             simpleList.add(-1, "invalid");
 
@@ -188,7 +188,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add element: ");
             sb.append(e.toString());
         }
-        
+
         String actual = sb.toString();
         sb.setLength(0);
 
@@ -201,7 +201,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testAdd.");
         }
     }
-    
+
     private static void testSizeAndClear() {
         LinkedList<String> list = new LinkedList<>();
         SimpleLinkedList simpleList = new SimpleLinkedList();
@@ -227,10 +227,10 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add elements: ");
             sb.append(e.toString());
         }
-        
+
         String expected = sb.toString();
         sb.setLength(0);
-        
+
         try {
             sb.append("Initial contents of list: " + simpleList);
             sb.append("\nInitial size of list: " + simpleList.size());
@@ -252,7 +252,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to add elements: ");
             sb.append(e.toString());
         }
-        
+
         String actual = sb.toString();
         sb.setLength(0);
 
@@ -265,7 +265,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testSizeAndClear.");
         }
     }
-    
+
     private static void testContainsAndIndexOf() {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("Aa", "Bb", "Cc", "Dd"));
         SimpleLinkedList simpleList = new SimpleLinkedList(Arrays.asList("Aa", "Bb", "Cc", "Dd"));
@@ -389,7 +389,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testContainsAndIndexOf.");
         }
     }
-    
+
     private static void testGet() {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("Aa", "Bb", "Cc", "Dd"));
         SimpleLinkedList simpleList = new SimpleLinkedList(Arrays.asList("Aa", "Bb", "Cc", "Dd"));
@@ -430,23 +430,23 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to get element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             list.clear();
-            
+
             String first = list.getFirst();
-            
+
             sb.append("\nFirst element: " + first);
         } catch (Exception e) {
             sb.append("\nFailed to get element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             list.clear();
-            
+
             String last = list.getLast();
-            
+
             sb.append("\nLast element: " + last);
         } catch (Exception e) {
             sb.append("\nFailed to get element: ");
@@ -492,23 +492,23 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to get element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             simpleList.clear();
-            
+
             String first = simpleList.getFirst();
-            
+
             sb.append("\nFirst element: " + first);
         } catch (Exception e) {
             sb.append("\nFailed to get element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             simpleList.clear();
-            
+
             String last = simpleList.getFirst();
-            
+
             sb.append("\nLast element: " + last);
         } catch (Exception e) {
             sb.append("\nFailed to get element: ");
@@ -527,7 +527,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testGet.");
         }
     }
-    
+
     private static void testRemove() {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("Aa", "Bb", "Cc", "Dd", "Ee", "Ff"));
         SimpleLinkedList simpleList = new SimpleLinkedList(Arrays.asList("Aa", "Bb", "Cc", "Dd", "Ee", "Ff"));
@@ -601,7 +601,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to remove element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             sb.append("\nInitial contents of list: " + list);
             sb.append("\nInitial size of list: " + list.size());
@@ -615,7 +615,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to remove element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             sb.append("\nInitial contents of list: " + list);
             sb.append("\nInitial size of list: " + list.size());
@@ -702,7 +702,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to remove element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             sb.append("\nInitial contents of list: " + simpleList);
             sb.append("\nInitial size of list: " + simpleList.size());
@@ -716,7 +716,7 @@ public class SimpleLinkedListTester {
             sb.append("\nFailed to remove element: ");
             sb.append(e.toString());
         }
-        
+
         try {
             sb.append("\nInitial contents of list: " + simpleList);
             sb.append("\nInitial size of list: " + simpleList.size());
@@ -743,7 +743,7 @@ public class SimpleLinkedListTester {
             System.out.println("PASSED: testRemove.");
         }
     }
-    
+
     private static void testSet() {
         LinkedList<String> list = new LinkedList<>(Arrays.asList("Aa", "Bb", "Zz", "Dd", "Ee", "Ff"));
         SimpleLinkedList simpleList = new SimpleLinkedList(Arrays.asList("Aa", "Bb", "Zz", "Dd", "Ee", "Ff"));
