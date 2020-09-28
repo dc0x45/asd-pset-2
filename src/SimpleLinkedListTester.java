@@ -289,6 +289,7 @@ public class SimpleLinkedListTester {
             boolean contains = list.contains("Zz");
             int index = list.indexOf("Zz");
 
+
             sb.append("\nList contains element: " + contains);
             sb.append("\nElement at index: " + index);
         } catch (Exception e) {
@@ -343,6 +344,7 @@ public class SimpleLinkedListTester {
 
             boolean contains = simpleList.contains("Zz");
             int index = simpleList.indexOf("Zz");
+
 
             sb.append("\nList contains element: " + contains);
             sb.append("\nElement at index: " + index);
